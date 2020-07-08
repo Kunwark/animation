@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+/************************/
+/*****Hanbal's work ****/
+
+@keyframes glow {
+  0% { box-shadow: 0 0 -10px rgba(0,112,242,0.5) ; }
+  40% { box-shadow: 0 0 40px rgba(0,112,242,0.4) ; }
+  60% { box-shadow: 0 0 40px rgba(0,112,242,0.4) ; }
+  100% { box-shadow: 0 0 -10px rgba(0,112,242,0.5) ; }
+}
+@keyframes rotary {
+ to {transform: rotateY(180deg);}
+}
+
+@keyframes rotaryfadeOut{
+    1% { opacity: 1;}
+    10% { opacity: 0;}
+	80% { opacity: 0;}
+    100% { opacity: 1;}
+} 
+@keyframes flip-minimize {
+    50%  {transform: rotateY(90deg);}
+    51%  {transform: rotateY(-90deg);}
+	
+}
+
+
+/***** Animation classes ***/
+
+.glow{
+	animation: glow 1s;	
+}
+
+.rotary {
+	animation: rotary 1s;
+	animation-iteration-count: 1;
+}
+.flip-minimize {
+	animation: flip-minimize 1s reverse;
+}
+/************************/
+/*****Kunwar's work ****/
+
+.rotary .apexchat_rd_green, .rotary .apexchat_rd_agent_image_wrapper, .rotary .apexchat_rd_invitation_close, .rotary .apexchat_rd_invitation_title{
+	animation: rotaryfadeOut 1.6s; /* 1.6s is optimum if "delayBy" :1.3, */
+	animation-iteration-count: 1;
+}
